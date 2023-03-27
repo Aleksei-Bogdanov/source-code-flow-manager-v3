@@ -1,0 +1,19 @@
+dependencies {
+    // Spring dependencies
+    implementation 'org.springframework.boot:spring-boot-starter-webflux'
+
+    // Third-party dependencies
+    compileOnly 'org.projectlombok:lombok'
+    annotationProcessor 'org.projectlombok:lombok'
+
+    // Test dependencies
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    testImplementation 'com.squareup.okhttp3:mockwebserver'
+    testImplementation 'io.projectreactor:reactor-test'
+    testCompileOnly 'org.projectlombok:lombok'
+    testAnnotationProcessor 'org.projectlombok:lombok'
+
+    // Dependencies from another modules
+    implementation project(':source-code-flow-manager-core:member-domain')
+    implementation project(':source-code-flow-manager-core:project-domain')
+}

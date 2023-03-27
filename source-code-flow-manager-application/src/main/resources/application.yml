@@ -1,0 +1,14 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/source-code-flow-manager_db
+    name: postgres
+    password: password
+    driver-class-name: org.postgresql.Driver
+  liquibase:
+    enabled: true
+    url: jdbc:postgresql://localhost:5432/source-code-flow-manager_db
+    user: postgres
+    password: password
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
